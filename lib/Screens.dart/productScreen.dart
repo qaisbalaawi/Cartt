@@ -55,7 +55,7 @@ class _ProductScreenState extends State<productScreen> {
             color: Colors.black,
             fontSize: 20.0,
           ),
-          backgroundColor: Colors.grey,
+          backgroundColor: Colors.black,
           centerTitle: true,
           actions: [
             GestureDetector(
