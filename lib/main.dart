@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:simple_cart/Screens.dart/CartModel.dart';
+
 import 'Screens.dart/welcomeScreen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ChangeNotifierProvider(
+    create: (context) => CartModel(),
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -13,7 +19,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'My App',
-      home: WelcomeScreen(),
+      home: SafeArea(child: WelcomeScreen()),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
